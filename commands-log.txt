@@ -1,2 +1,30 @@
 This is where I will store my learning progress from deepseek.
 
+# See where I am in the filesystem
+pwd
+
+# List the files and directories in my current location
+ls
+
+# Created a new directory called 'devops-journey'
+mkdir devops-journey
+
+# Change current directory to the new one
+cd devops-journey
+
+# Created my first file
+touch hello-world.txt
+
+# Check the contents of the file (it will be empty)
+cat hello-world.txt
+
+# Used 'nano', a simple text editor to inser some text into the file.
+nano hello-world.txt
+
+#learned some git commands
+#see status of git
+git status
+
+git add
+
+git commit
