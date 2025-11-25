@@ -33,5 +33,11 @@ echo "--- Top 5 Processes by CPU ---"
 ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head -6
 # This is a more complex command. It lists processes, sorts them by CPU usage, and takes only the top 5.
 
+#Section 5: Network connection information
+echo ''
+echo '--- Network Information ---'
+ip addr show
+# prints network information like ip address etc
+
 echo ""
 echo "Snapshot complete."
