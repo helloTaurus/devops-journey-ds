@@ -39,5 +39,27 @@ echo '--- Network Information ---'
 ip addr show
 # prints network information like ip address etc
 
+
+# Add this to your system-snapshot.sh for an even better view
+
+echo ""
+echo "--- Critical Processes Check ---"
+# Check if common DevOps services are running
+if pgrep "nginx" > /dev/null; then
+    echo "✅ Nginx is running"
+else
+    echo "❌ Nginx is NOT running"
+fi
+
+if pgrep "docker" > /dev/null; then
+    echo "✅ Docker is running"
+else
+    echo "❌ Docker is NOT running"
+fi
+
+# Count total running processes
+echo "Total running processes: $(ps -e | wc -l)"
+
+
 echo ""
 echo "Snapshot complete."
